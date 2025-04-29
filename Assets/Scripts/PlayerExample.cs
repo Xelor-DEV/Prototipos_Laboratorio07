@@ -2,29 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerExample : BasePlayerController, IAimable, IMoveable, IAttackable
+public class PlayerExample : BasePlayerController, IMoveable, IAttackable
 {
-    public Vector2 Position
-    {
-        get
-        {
-            return _aimPosition;
-        }
 
-        set
-        {
-            _aimPosition = value;
-
-            Debug.Log("Aim from " + this.name);
-        }
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-
-        Debug.Log("Child Awake");
-    }
 
     protected override void Start()
     {
