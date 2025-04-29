@@ -7,5 +7,5 @@ public interface IMoveable
 
 public interface IAttackable
 {
-    void Attack(Vector2 mousePosition);
+    void Attack(Vector2 position);
 }

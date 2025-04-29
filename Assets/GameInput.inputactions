@@ -15,22 +15,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Aim",
+                    "name": "Attack",
                     "type": "Value",
-                    "id": "f8fa03d9-0bd5-4d04-a59c-52370f42d3ba",
+                    "id": "d7951c09-a0b3-4b71-8dcf-66425955a74c",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "d7951c09-a0b3-4b71-8dcf-66425955a74c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -91,19 +82,8 @@
                 },
                 {
                     "name": "",
-                    "id": "917551bb-ca4a-4ba5-8883-ebb4b17df102",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "551fe0ed-0ee0-406f-91f3-5a610f1cdf40",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

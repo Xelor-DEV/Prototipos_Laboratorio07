@@ -9,12 +9,14 @@ public class InputHandler : MonoBehaviour
     [SerializeField] private GameObject PlayerController;
 
     private IMoveable _characterMovement;
+    private IAttackable _characterAttack;
+
     //private IAttackable _characterAttack;
 
     private void Awake()
     {
         _characterMovement = PlayerController.GetComponent<IMoveable>();
-        //_characterAttack = PlayerController.GetComponent<IAttackable>();
+        _characterAttack = PlayerController.GetComponent<IAttackable>();
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -22,17 +24,17 @@ public class InputHandler : MonoBehaviour
         _characterMovement.Move(context.ReadValue<Vector2>());
     }
 
-    public void OnAim(InputAction.CallbackContext context)
+    public void OnAttack(InputAction.CallbackContext context)
     {
         //Debug.Log(context.ReadValue<Vector2>());
 
-        //_characterAim.Position = context.ReadValue<Vector2>();
+        Vector2 pos = context.ReadValue<Vector2>();
+        _characterAttack.Attack(pos);
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        //Debug.Log(context.phase);
+    //public void OnAttack(InputAction.CallbackContext context)
+    //{
+    //    //Debug.Log(context.phase);
 
-        //_characterAttack.Attack(_characterAim.Position);
-    }
+    //}
 }
